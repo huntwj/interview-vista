@@ -34,6 +34,8 @@ We will simulate the development of a World-related app. If you are not familiar
 
 During the interview, we will work as a [pair programming](https://en.wikipedia.org/wiki/Pair_programming) team to solve some problems. The problems we ask you will depend on your experience and the time we have. Ideally you will spend time as both the "navigator" as well as the "driver." For most interviews, you will be offered a choice of tasks that allow you to best showcase your skills and interests.
 
+This job will be TypeScript intensive, so this pair-programming will be done using TypeScript.
+
 ## Getting Started
 
 First, run the development server:
@@ -51,3 +53,12 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+## Note covered here...
+
+While we will get some hint of your technical expertise with these technical problems, we will only be directly testing a small subset of the required skillset for this job. Some other skills that will be helpful are:
+
+- [ ] PHP
+- [ ] Rust
+- [ ] MySQL // SQL // Relational Databases
+- [ ] Unix administration and command-line tools
