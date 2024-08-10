@@ -12,26 +12,27 @@ To save time, we recommend cloning this repository and getting things up and run
 >
 > This repository is tested with [Visual Studio Code](https://code.visualstudio.com/) and its devcontainer extensions, however any IDE that supports devcontainers should be usable. Jetbrains IDEs support devcontainers, and there is also the [@devcontainers/cli](https://github.com/devcontainers/cli) NPM package to do everything "manually."
 
-If you are able to get things up and running, you may use the code editor of your choice for the interview. Again, VS Code is the standard, but we do not require you use it.
+Once you get things up and running, you may use the code editor of your choice for the interview. Again, VS Code is the standard, but we do not require its use.
 
-It is a soft-expectation that you will be able to clone this repository and get the project up and running on the main branch before the interview begins. We will have a limited time for the interview, so it will be more difficult if we lose time to setting up the coding environment.
+It is, however, a soft-expectation that you will be able to clone this repository and get the project up and running on the main branch before the interview begins. We will have a limited time for the interview, so it will be more difficult if we lose time to setting up the coding environment. Cloning the repository and getting it up and running _should_ take 15 minutes or less. Longer times would normally only be caused by poor internet connections.
 
-If you are not familiar with Next.js, it would probably behoove you to review their architecture ahead of time. Here are some links that may prove useful:
+We will simulate the development of a World-related app. If you are not familiar with Next.js, it would probably behoove you to review their architecture ahead of time. Here are some links that may prove useful:
 
 - [Next.js](https://nextjs.org/)
   - [Project Structure](https://nextjs.org/docs/getting-started/project-structure)
   - [Routing](https://nextjs.org/docs/app/building-your-application/routing)
   - [Data Fetching](https://nextjs.org/docs/app/building-your-application/data-fetching)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Wikipedia - Wordle](https://en.wikipedia.org/wiki/Wordle)
 
 > Note:
 >
-> Don't miss that sneaky Wordle link at the bottom! We're going to pretend like we're creating a Wordle app, so it will be very helpful to understand as much as possible about the Wordle game.
+> Please do not miss that semi-sneaky Wordle link at the bottom! We're going to pretend like we're creating a Wordle app, so it will be very helpful to understand as much as possible about the Wordle game.
 
 ## During the Interview
 
-During the interview, we will work as a [pair programming](https://en.wikipedia.org/wiki/Pair_programming) team to solve some problems. The problems asked will depend on your experience and the time we have. Ideally you will spend time as both the "navigator" as well as the "driver." For most interviews, you will be offered a choice of tasks that allow you to best showcase your skills and interests.
+During the interview, we will work as a [pair programming](https://en.wikipedia.org/wiki/Pair_programming) team to solve some problems. The problems we ask you will depend on your experience and the time we have. Ideally you will spend time as both the "navigator" as well as the "driver." For most interviews, you will be offered a choice of tasks that allow you to best showcase your skills and interests.
 
 ## Getting Started
 
