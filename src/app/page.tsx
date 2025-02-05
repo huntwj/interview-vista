@@ -1,7 +1,6 @@
 "use client";
 
 import GuessRenderer from "@/components/GuessRenderer";
-import Image from "next/image";
 import { ChangeEventHandler, useMemo, useState } from "react";
 
 export default function Home() {
@@ -51,6 +50,8 @@ export default function Home() {
         <p className="text-2xl">Things we can do to improve this:</p>
 
         <ul className="list-disc">
+          <li>Configure Jest to work properly</li>
+          <li>Handle repeated letters correctly.</li>
           <li className="li">
             Add a button to submit a guess. It should only be enabled when the
             input has exactly five letters.
@@ -62,6 +63,9 @@ export default function Home() {
           <li>
             {"Use internet's official Wordle lists for answers and guesses."}
           </li>
+          <li>Limit the user to six guesses.</li>
+          <li>Add a reset button</li>
+          <li>Prevent guesses after the user guesses correctly.</li>
         </ul>
       </div>
     </main>
