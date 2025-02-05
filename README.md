@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository provides us with a simple playground where we can do some pair programming to solve some programming problems. These problems should mirror, albeit indirectly, the kinds of problems that a web developer might face in the course of their work. Further, since we'll be pair programming, our interactions will give both of us a feel for what it's like to work with the other. Never forget, you're interviewing us as much as we're interviewing you!
+This repository provides us with a simple playground where we can do some pair programming to solve some simple problems. These problems should mirror, albeit indirectly, the kinds of problems that a web developer might face in the course of their work. Further, since we'll be pair programming, our interactions will give both of us a feel for what it's like to work with the other. Never forget, you're interviewing us as much as we're interviewing you!
 
 ## Before the Interview
 
@@ -16,7 +16,7 @@ Once you get things up and running, you may use the code editor of your choice f
 
 It is, however, a soft-expectation that you will be able to clone this repository and get the project up and running on the main branch before the interview begins. We will have a limited time for the interview, so it will be more difficult if we lose time to setting up the coding environment. Cloning the repository and getting it up and running _should_ take 15 minutes or less. Longer times would normally only be caused by poor internet connections.
 
-We will simulate the development of a World-related app. If you are not familiar with Next.js, it would probably behoove you to review their architecture ahead of time. Here are some links that may prove useful:
+We will simulate the development of a Wordle-related app. If you are not familiar with Next.js, it would probably behoove you to review their architecture ahead of time. Here are some links that may prove useful:
 
 - [Next.js](https://nextjs.org/)
   - [Project Structure](https://nextjs.org/docs/getting-started/project-structure)
@@ -58,7 +58,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 While we will get some hint of your technical expertise with these technical problems, we will only be directly testing a small subset of the required skillset for this job. Some other skills that will be helpful are:
 
-- [ ] PHP
-- [ ] Rust
-- [ ] MySQL // SQL // Relational Databases
+- [ ] Python
+- [ ] SQL // Relational Databases
 - [ ] Unix administration and command-line tools
