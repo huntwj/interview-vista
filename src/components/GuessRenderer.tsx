@@ -5,6 +5,8 @@ type LetterGuess = {
   color: string;
 };
 
+export type Guess = LetterGuess[];
+
 interface Props {
   guess: LetterGuess[];
 }

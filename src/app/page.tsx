@@ -1,16 +1,29 @@
 "use client";
 
-import GuessRenderer from "@/components/GuessRenderer";
+import GuessInput from "@/components/GuessInput";
+import GuessList from "@/components/GuessList";
+import GuessRenderer, { Guess, LetterGuess } from "@/components/GuessRenderer";
 import { ChangeEventHandler, useMemo, useState } from "react";
+
+const WORDLE_WORD_LENGTH = 5;
 
 export default function Home() {
   const answer = "ANVIL";
   const [inputWord, setInputWord] = useState("");
-  const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-    setInputWord(e.target.value.toLocaleUpperCase());
-  };
+  const [previousGuesses, setPreviousGuesses] = useState<Guess[]>([]);
 
   console.log("inputWord", inputWord);
+
+  const gradeInput = (input: string): Guess =>
+    input.split("").map((letter, index) => {
+      if (letter === answer[index]) {
+        return { letter, color: "green" };
+      } else if (answer.includes(letter)) {
+        return { letter, color: "orange" };
+      } else {
+        return { letter, color: "grey" };
+      }
+    });
 
   const guess = useMemo(() => {
     if (inputWord.length !== answer.length) {
@@ -29,6 +42,14 @@ export default function Home() {
     return result;
   }, [inputWord]);
 
+  const addGuess = (input: string) => {
+    if (inputWord.length === WORDLE_WORD_LENGTH) {
+      const guess = gradeInput(input);
+      setPreviousGuesses([...previousGuesses, guess]);
+      setInputWord("");
+    }
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center p-24 gap-4">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -39,13 +60,12 @@ export default function Home() {
       </div>
       <p>Hint: The target word is ANVIL.</p>
       <p>TODO: Remove the hint above!</p>
-      <input
-        value={inputWord}
-        onChange={handleChange}
-        type="text"
-        style={{ color: "black" }}
+      <GuessInput
+        inputWord={inputWord}
+        onAddGuess={addGuess}
+        onChange={setInputWord}
       />
-      <GuessRenderer guess={guess} />
+      <GuessList guesses={previousGuesses} />
       <div>
         <p className="text-2xl">Things we can do to improve this:</p>
 

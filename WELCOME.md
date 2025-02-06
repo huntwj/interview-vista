@@ -11,3 +11,9 @@ Instead....
 - The goal is to make progress on this app and demonstrate how you work and think in a collaborative environment.
 
 In doing so I hope we can both get a feel for whether or not we could work together on bigger projects in the future.
+
+## Agenda
+
+- Introductions and Overview
+- Questions and Followup
+- "Coding"
