@@ -1,14 +1,8 @@
+import { Guess } from "@/app/model/guess";
 import LetterGuessRenderer from "./LetterGuessRenderer";
 
-type LetterGuess = {
-  letter: string;
-  color: string;
-};
-
-export type Guess = LetterGuess[];
-
 interface Props {
-  guess: LetterGuess[];
+  guess: Guess;
 }
 const GuessRenderer: React.FC<Props> = ({ guess }) => {
   return (

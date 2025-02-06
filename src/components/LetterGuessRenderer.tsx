@@ -1,15 +1,12 @@
-type LetterGuess = {
-  letter: string;
-  color: string;
-};
+import { GradedLetter } from "@/app/model/guess";
 
 interface Props {
-  letterGuess: LetterGuess;
+  letterGuess: GradedLetter;
 }
 
 const LetterGuessRenderer: React.FC<Props> = ({ letterGuess }) => {
   return (
-    <span style={{ margin: 5, padding: 5, backgroundColor: letterGuess.color }}>
+    <span style={{ margin: 5, padding: 5, backgroundColor: letterGuess.grade }}>
       {letterGuess.letter}
     </span>
   );
