@@ -2,28 +2,30 @@
 
 import GuessInput from "@/components/GuessInput";
 import GuessList from "@/components/GuessList";
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import { gradeInput, type Guess } from "./guess";
+import {
+  addGuessAction,
+  PlayWordle,
+  reducer,
+  reset,
+  updateInputWord,
+} from "./model/play-wordle";
 
-const WORDLE_WORD_LENGTH = 5;
+const initGameState: PlayWordle = {
+  answer: "ANVIL",
+  WORDLE_WORD_LENGTH: 5,
+  inputWord: "",
+  previousGuesses: [],
+};
 
 export default function Home() {
-  const answer = "ANVIL";
-  const [inputWord, setInputWord] = useState("");
-  const [previousGuesses, setPreviousGuesses] = useState<Guess[]>([]);
+  const [gameState, dispatch] = useReducer(reducer, initGameState);
 
-  const addGuess = (input: string) => {
-    if (inputWord.length === WORDLE_WORD_LENGTH) {
-      const guess = gradeInput(input, answer);
-      setPreviousGuesses([...previousGuesses, guess]);
-      setInputWord("");
-    }
-  };
-
-  const resetGuesses = () => {
-    setInputWord("");
-    setPreviousGuesses([]);
-  };
+  const setInputWord = (inputWord: string) =>
+    dispatch(updateInputWord(inputWord));
+  const addGuess = (guess: string) => dispatch(addGuessAction(guess));
+  const resetGuesses = () => dispatch(reset());
 
   return (
     <main className="flex min-h-screen flex-col items-center p-24 gap-4">
@@ -33,14 +35,12 @@ export default function Home() {
           <code className="font-mono font-bold">src/app/page.tsx</code>
         </p>
       </div>
-      <p>Hint: The target word is ANVIL.</p>
-      <p>TODO: Remove the hint above!</p>
       <GuessInput
-        inputWord={inputWord}
+        inputWord={gameState.inputWord}
         onAddGuess={addGuess}
         onChange={setInputWord}
       />
-      <GuessList guesses={previousGuesses} />
+      <GuessList guesses={gameState.previousGuesses} />
       <button onClick={resetGuesses}>Reset</button>
       <div>
         <p className="text-2xl">Things we can do to improve this:</p>
