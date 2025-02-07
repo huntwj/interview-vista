@@ -1,4 +1,4 @@
-import { GradedLetter } from "@/app/model/guess";
+import { GradedLetter } from "@/app/guess";
 
 interface Props {
   letterGuess: GradedLetter;

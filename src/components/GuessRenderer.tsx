@@ -1,4 +1,4 @@
-import { Guess } from "@/app/model/guess";
+import { Guess } from "@/app/guess";
 import LetterGuessRenderer from "./LetterGuessRenderer";
 
 interface Props {

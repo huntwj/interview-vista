@@ -3,7 +3,7 @@
 import GuessInput from "@/components/GuessInput";
 import GuessList from "@/components/GuessList";
 import { useState } from "react";
-import { gradeInput, type Guess } from "./model/guess";
+import { gradeInput, type Guess } from "./guess";
 
 const WORDLE_WORD_LENGTH = 5;
 
@@ -46,7 +46,9 @@ export default function Home() {
         <p className="text-2xl">Things we can do to improve this:</p>
 
         <ul className="list-disc">
-          <li>Configure Jest to work properly</li>
+          <li style={{ textDecoration: "line-through" }}>
+            Configure Jest to work properly
+          </li>
           <li style={{ textDecoration: "line-through" }}>
             Handle repeated letters correctly.
           </li>
