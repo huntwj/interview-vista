@@ -50,11 +50,13 @@ export default function Home() {
           <li>Include a mechanism to change the target word</li>
           <li>
             {
-              "Use internet's official Wordle lists for answers and guesses (allowed-words.txt)."
+              "Use internet's official Wordle lists for answers and guesses (allowed-words.txt)"
             }
           </li>
-          <li>Limit the user to six guesses.</li>
-          <li>Prevent guesses after the user guesses correctly.</li>
+          <li>Limit the user to six guesses</li>
+          <li>Prevent guesses after the user guesses correctly</li>
+          <li>Improve UI: Style the add guess button</li>
+          <li>Improve UI: Make the output grid more consistent</li>
         </ul>
       </div>
     </main>
