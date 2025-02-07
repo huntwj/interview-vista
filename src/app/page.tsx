@@ -46,25 +46,14 @@ export default function Home() {
         <p className="text-2xl">Things we can do to improve this:</p>
 
         <ul className="list-disc">
-          <li style={{ textDecoration: "line-through" }}>
-            Configure Jest to work properly
-          </li>
-          <li style={{ textDecoration: "line-through" }}>
-            Handle repeated letters correctly.
-          </li>
-          <li className="li" style={{ textDecoration: "line-through" }}>
-            Add a button to submit a guess. It should only be enabled when the
-            input has exactly five letters.
-          </li>
-          <li style={{ textDecoration: "line-through" }}>
-            Keep track of past guesses in a list and show all results together.
-          </li>
+          <li>Implement the Wordle game state as a type</li>
           <li>Include a mechanism to change the target word</li>
           <li>
-            {"Use internet's official Wordle lists for answers and guesses."}
+            {
+              "Use internet's official Wordle lists for answers and guesses (allowed-words.txt)."
+            }
           </li>
           <li>Limit the user to six guesses.</li>
-          <li style={{ textDecoration: "line-through" }}>Add a reset button</li>
           <li>Prevent guesses after the user guesses correctly.</li>
         </ul>
       </div>
