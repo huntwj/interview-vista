@@ -20,7 +20,7 @@ const GuessInput: React.FC<Props> = ({ inputWord, onChange, onAddGuess }) => {
   };
 
   return (
-    <div>
+    <>
       <input
         value={inputWord}
         onChange={handleChange}
@@ -28,13 +28,15 @@ const GuessInput: React.FC<Props> = ({ inputWord, onChange, onAddGuess }) => {
         type="text"
         style={{ color: "black" }}
       />
-      <button onClick={() => onAddGuess(inputWord)} disabled={!canAddGuess}>
+      <button
+        onClick={() => onAddGuess(inputWord)}
+        disabled={!canAddGuess}
+        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+      >
         Add guess
       </button>
-    </div>
+    </>
   );
-
-  return <div>This is my component</div>;
 };
 
 export default GuessInput;

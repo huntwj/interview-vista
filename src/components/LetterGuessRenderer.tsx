@@ -6,7 +6,17 @@ interface Props {
 
 const LetterGuessRenderer: React.FC<Props> = ({ letterGuess }) => {
   return (
-    <span style={{ margin: 5, padding: 5, backgroundColor: letterGuess.grade }}>
+    <span
+      style={{
+        margin: 5,
+        padding: 5,
+        minWidth: 30,
+        minHeight: 30,
+        display: "inline-block",
+        textAlign: "center",
+        backgroundColor: letterGuess.grade,
+      }}
+    >
       {letterGuess.letter}
     </span>
   );

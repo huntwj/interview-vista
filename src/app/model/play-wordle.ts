@@ -4,7 +4,6 @@ import { gradeInput, Guess } from "../guess";
 export function reducer(state: PlayWordle, action: Action): PlayWordle {
   switch (action.type) {
     case "UPDATEINPUTWORD":
-      console.log("updating input");
       return {
         ...state,
         inputWord: action.inputWord,
@@ -24,7 +23,6 @@ export function reducer(state: PlayWordle, action: Action): PlayWordle {
       };
     }
     default:
-      console.log("doing nothing");
       return state;
   }
 }

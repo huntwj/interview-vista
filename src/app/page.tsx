@@ -41,7 +41,12 @@ export default function Home() {
         onChange={setInputWord}
       />
       <GuessList guesses={gameState.previousGuesses} />
-      <button onClick={resetGuesses}>Reset</button>
+      <button
+        onClick={resetGuesses}
+        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+      >
+        Reset
+      </button>
       <div>
         <p className="text-2xl">Things we can do to improve this:</p>
 
